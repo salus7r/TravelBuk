@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Kitten Tricks",
-    "slug": "kitten-tricks",
-    "githubUrl": "https://github.com/akveo/kittenTricks",
+    "name": "Travel Buk",
+    "slug": "travel-buk",
+    "githubUrl": "https://github.com/salus7r/TravelBuk",
     "sdkVersion": "28.0.0",
     "icon": "./icon.png",
     "orientation": "portrait",
@@ -13,14 +13,14 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "bundleIdentifier": "com.akveo.kittentricks",
-      "buildNumber": "1.0.10",
+      "bundleIdentifier": "com.aztechnologies.travelbuk",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.akveo.kittentricks",
+      "package": "com.aztechnologies.travelbuk",
       "versionCode": 16
     },
-    "version": "1.0.10"
+    "version": "1.0.0"
   }
 }

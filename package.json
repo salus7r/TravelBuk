@@ -1,8 +1,8 @@
 {
-  "name": "kittenTricks",
-  "version": "1.0.9",
+  "name": "TravelBuk",
+  "version": "1.0.0",
   "private": true,
-  "author": "akveo",
+  "author": "Salman Malik",
   "scripts": {
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",

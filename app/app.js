@@ -18,7 +18,7 @@ import { data } from './data';
 bootstrap();
 data.populateData();
 
-const KittenApp = createStackNavigator({
+const TravelBukApp = createStackNavigator({
   First: {
     screen: Screens.SplashScreen,
   },
@@ -82,7 +82,7 @@ export default class App extends React.Component {
 
   renderApp = () => (
     <View style={{ flex: 1 }}>
-      <KittenApp onNavigationStateChange={this.onNavigationStateChange} />
+      <TravelBukApp onNavigationStateChange={this.onNavigationStateChange} />
     </View>
   );
 

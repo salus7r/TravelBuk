@@ -25,7 +25,7 @@ export class Settings extends React.Component {
     sendPush: true,
     shouldRefresh: false,
     twitterEnabled: true,
-    googleEnabled: false,
+    googleEnabled: true,
     facebookEnabled: true,
   };
 

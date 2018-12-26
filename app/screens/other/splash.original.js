@@ -1,11 +1,13 @@
 import React from 'react';
 import {
   StyleSheet,
+  Image,
   View,
   Dimensions,
   StatusBar,
 } from 'react-native';
 import {
+  RkText,
   RkTheme,
 } from 'react-native-ui-kitten';
 import {
@@ -14,13 +16,12 @@ import {
 } from 'react-navigation';
 import { ProgressBar } from '../../components';
 import { KittenTheme } from '../../config/theme';
-import { scale, scalePercentage } from '../../utils/scale';
+import { scale, scaleVertical, scalePercentage } from '../../utils/scale';
 import NavigationType from '../../config/navigation/propTypes';
 
-import SplashWallpaper from './splashWallpaper';
-import SplashLogo from './splashLogo';
+// import Wallpaper from './Wallpaper';
 
-const delay = 500;
+const delay = 5000;
 
 export class SplashScreen extends React.Component {
   static propTypes = {
@@ -60,22 +61,50 @@ export class SplashScreen extends React.Component {
   };
 
   render = () => (
-    <SplashWallpaper>
-      <SplashLogo />
+    <View style={styles.container}>
+      <View>
+        <Image
+          style={[styles.image, { width: Dimensions.get('window').width }]}
+          source={require('../../assets/images/splashBack.png')}
+        />
+        <View style={styles.text}>
+          <RkText rkType='logo' style={styles.appName}>Travel Buk</RkText>
+          <RkText rkType='light' style={styles.hero}>Travel & Tours</RkText>
+        </View>
+      </View>
       <ProgressBar
         color={RkTheme.current.colors.accent}
         style={styles.progress}
         progress={this.state.progress}
         width={scale(320)}
       />
-    </SplashWallpaper>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: KittenTheme.colors.screen.base,
+    justifyContent: 'space-between',
+    flex: 1,
+  },
+  image: {
+    resizeMode: 'cover',
+    // height: scaleVertical(430),
+    height: scalePercentage(),
+  },
+  text: {
+    alignItems: 'center',
+  },
+  hero: {
+    fontSize: 37,
+  },
+  appName: {
+    fontSize: 62,
+  },
   progress: {
     alignSelf: 'center',
-    marginBottom: 50,
+    marginBottom: 35,
     backgroundColor: '#e5e5e5',
   },
 });

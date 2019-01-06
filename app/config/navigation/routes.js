@@ -264,9 +264,9 @@ menuRoutes.unshift({
   // title: 'Start',
   // screen: Screens.GridV2,
   // children: [],
-  id: 'Login2',
+  id: 'Login1',
   title: 'Login',
-  screen: Screens.LoginV2,
+  screen: Screens.LoginV1,
   children: [],
 });
 

@@ -17,7 +17,7 @@ const initialState = {
   isLoading: false
 };
 
-const authReducer = (state, action) => {
+export default (state, action) => {
   state = state || initialState;
   switch (action.type) {
     case IS_LOADING:
@@ -67,5 +67,3 @@ const authReducer = (state, action) => {
       return state;
   }
 };
-
-export default authReducer;

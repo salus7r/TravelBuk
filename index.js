@@ -4,11 +4,7 @@ import App from "./app/app";
 import { expo } from "./app/app.json";
 import { Provider } from "react-redux";
 
-AppRegistry.registerComponent("travelBuk", () => App);
-
-import configureStore from "./store";
-
-const store = configureStore();
+import store from "./app/redux/config/store";
 
 const RNRedux = () => (
   <Provider store={store}>
@@ -16,4 +12,5 @@ const RNRedux = () => (
   </Provider>
 );
 
+// AppRegistry.registerComponent("travelBuk", () => App);
 AppRegistry.registerComponent(expo.name, () => RNRedux);

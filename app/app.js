@@ -85,4 +85,5 @@ export default class App extends React.Component {
     this.state.isLoaded ? this.renderApp() : this.renderLoading();
 }
 
+console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
 Expo.registerRootComponent(App);

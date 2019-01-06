@@ -35,7 +35,7 @@ export class LoginV1 extends React.Component {
 
   render = () => (
     <SplashWallpaper>
-      <RkAvoidKeyboard onStartShouldSetResponder={() => true} onResponderRelease={() => Keyboard.dismiss()}>
+      <RkAvoidKeyboard onStartShouldSetResponder={() => true} onResponderRelease={() => Keyboard.dismiss()} style={styles.screen}>
         <SplashLogoWithoutText />
         <View style={styles.container}>
           <View style={styles.buttons}>
@@ -72,17 +72,18 @@ export class LoginV1 extends React.Component {
 
 const styles = RkStyleSheet.create(theme => ({
   screen: {
-    flex: 1,
-    alignItems: "center"
+    flex: 3,
+    alignItems: "center",
+    justifyContent: "center"
   },
   container: {
     paddingHorizontal: 17,
-    paddingBottom: scaleVertical(22),
+    paddingBottom: scaleVertical(10),
     alignItems: "center"
   },
   footer: {
     alignSelf: "center",
-    marginBottom: 50
+    marginBottom: 30
   },
   buttons: {
     flexDirection: "row",
@@ -101,13 +102,14 @@ const styles = RkStyleSheet.create(theme => ({
     flexDirection: "row"
   },
   dontHaveAccountText: {
-    fontSize: 18,
-    fontWeight: "400",
+    fontSize: 20,
+    fontWeight: "500",
     color: "white"
   },
   signUpText: {
-    fontSize: 18,
-    fontWeight: "500",
+    fontSize: 20,
+    fontWeight: "600",
+    paddingLeft: "10",
     color: KittenTheme.colors.accent
   }
 }));

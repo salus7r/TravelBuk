@@ -109,7 +109,7 @@ const styles = RkStyleSheet.create(theme => ({
   signUpText: {
     fontSize: 20,
     fontWeight: "600",
-    paddingLeft: "10",
+    paddingLeft: "10px",
     color: KittenTheme.colors.accent
   }
 }));
